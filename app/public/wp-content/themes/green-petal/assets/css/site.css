@@ -1,0 +1,313 @@
+@font-face{
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Regular.ttf');    
+}
+@font-face{
+    font-family: 'Graphik';
+    src: url('../fonts/GraphikLight.otf');    
+}
+@font-face{
+    font-family: 'Exo-2';
+    src: url('../fonts/Exo2-Regular.ttf');    
+}
+@font-face{
+    font-family: 'Exo-2-Light';
+    src: url('../fonts/Exo2-Light.ttf');    
+}
+:root{
+    --button-color: #1f6939
+}
+body{
+    margin: 0;
+    font-family: 'Exo-2-Light';
+    color: #292929;
+}
+a{
+    text-decoration: none;
+    outline: none !important;
+}
+input, select, textarea, button{
+    outline: none;
+    box-shadow: none;
+}
+h1, h2, h3, h4, h5, h6{
+    /* font-family: 'Canela'; */
+    font-family: 'Playfair Display', serif;
+    color: #292929;
+    margin: 0 0 2vw 0;
+    font-weight: 400;
+}
+.container{
+    max-width: calc(100% - 30px);
+    margin: auto;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.unstyled-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+figure{
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+figure > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.site-button{
+    width: 240px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--button-color);
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 15px;
+}
+.site-button span{
+    z-index: 9;
+}
+.site-button:after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #237d43;
+    transition: 0.8s cubic-bezier(0.74, 0.12, 0, 0.97);
+}
+.site-button:hover:after{
+    top: 0;
+}
+.small-title{
+    margin: 0 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+/*  */
+.site-header{
+    padding: 2vw 0;
+}
+.site-navigation-nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.site-navigation-wrap{
+    margin-left: auto;
+}
+.site-navigation li{
+    display: inline-block;
+}
+.site-navigation li:not(:last-of-type){
+    margin-right: 2vw;
+}
+.site-navigation li a{
+    color: #292929;
+    transition: 0.5s;
+    font-size: 1.1vw;
+}
+.site-navigation li a:hover{
+    color: var(--button-color);
+}
+/*  */
+/*==== HOMEPAGE ====*/
+.home-benefits{
+    text-align: center;
+    background: #F8F6F5;
+}
+.benefits-wrap{
+    margin-top: 5vw;
+    width: 100%;
+    align-items: center;
+}
+.home-benefits .benefits-wrap .col{
+    width: 25%;
+}
+.home-benefits .benefits-wrap .col:nth-child(2){
+    width: 50%;
+}
+.benefits-wrap li{
+    text-align: center;
+}
+.benefits-wrap li:not(:last-child){
+    margin-bottom: 6vw;
+}
+.benefits-wrap li img{
+    width: 60px;
+    display: block;
+    margin: 0 auto 15px;
+}
+.benefits-wrap .img-col figure{
+    margin: 0px;
+    height: 700px;
+    padding: 0 4vw;
+    overflow: hidden;
+}
+.benefits-wrap .img-col figure img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.nutrional-values{
+    padding: 7vw 0;    
+    position: relative;
+    margin: 0 0 3vw 0;
+    color: #FFF;
+}
+.nutrional-values > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 85%;
+    z-index: -1;
+    filter: blur(1.2px);
+}
+.nutrional-values:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.nutrional-values h2{
+    color: #FFF;
+}
+.nutrional-values .col{
+    z-index: 9;
+    position: relative;
+}
+.nutrional-values .col:first-of-type{
+    width: 50%;
+}
+.sorghum-syrup .row{
+}
+.sorghum-syrup .container .row{
+    justify-content: center;
+}
+.sorghum-syrup .container img{
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.sorghum-syrup .col{
+    width: 50%;
+    position: relative;
+}
+.sorghum-syrup .col img:nth-of-type(2){
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4vw;
+}
+.sorghum-syrup .col:nth-child(2){
+    text-align: center;
+    width: 50%;    
+    margin-top: auto;
+}
+.sorghum-syrup .syrup-back{
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #ffd4d6;
+    z-index: -1;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.home-about{
+    padding: 7vw 0px;
+}
+.sorghum-syrup{
+    position: relative;
+}
+.sorghum-syrup .sryup-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.sorghum-syrup .sryup-bg figure{
+    width: 50%;
+    margin: 0;
+    height: 100%;
+}
+.sorghum-syrup .sryup-bg figure img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.sorghum-syrup .sryup-bg figure:nth-child(2){
+    height: 50%;
+}
+.home-about .container{
+    margin-left: 0;
+}
+.home-about .row{
+    align-items: center;
+}
+.home-about .col:first-of-type{
+    width: 45%;
+    min-height: 450px;
+}
+.home-about .col:last-of-type{
+    width: 50%;
+    margin-left: auto;
+}
+.home-about figure{
+    height: 500px;
+}
+/*==== HOMEPAGE Ends ====*/
+@media(min-width: 992px){
+    .nav-toggler{
+        display: none;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        max-width: 90%;
+    }
+    h2{
+        font-size: 4vw;
+        line-height: 4vw;
+    }
+    body{
+        font-size: 1.2vw;
+    }
+    p{
+        line-height: 2vw;
+    }
+    .home-benefits .col p:not(.small-title){
+        max-width: 70%;
+        margin: auto;
+    }
+    .home-benefits{
+        padding: 7vw 0;
+    }
+}

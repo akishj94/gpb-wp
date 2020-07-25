@@ -1,0 +1,40 @@
+[25-Jul-2020 15:01:33 UTC] PHP Warning:  Illegal offset type in isset or empty in D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\class-acf-data.php on line 125
+[25-Jul-2020 15:01:33 UTC] PHP Stack trace:
+[25-Jul-2020 15:01:33 UTC] PHP   1. {main}() D:\WordPress\GPB\app\public\index.php:0
+[25-Jul-2020 15:01:33 UTC] PHP   2. require() D:\WordPress\GPB\app\public\index.php:17
+[25-Jul-2020 15:01:33 UTC] PHP   3. require_once() D:\WordPress\GPB\app\public\wp-blog-header.php:19
+[25-Jul-2020 15:01:33 UTC] PHP   4. include() D:\WordPress\GPB\app\public\wp-includes\template-loader.php:106
+[25-Jul-2020 15:01:33 UTC] PHP   5. have_rows() D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php:52
+[25-Jul-2020 15:01:33 UTC] PHP   6. get_field_object() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:497
+[25-Jul-2020 15:01:33 UTC] PHP   7. acf_maybe_get_field() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:121
+[25-Jul-2020 15:01:33 UTC] PHP   8. acf_is_field_key() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:171
+[25-Jul-2020 15:01:33 UTC] PHP   9. apply_filters() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-field-functions.php:195
+[25-Jul-2020 15:01:33 UTC] PHP  10. WP_Hook->apply_filters() D:\WordPress\GPB\app\public\wp-includes\plugin.php:206
+[25-Jul-2020 15:01:33 UTC] PHP  11. _acf_apply_is_local_field_key() D:\WordPress\GPB\app\public\wp-includes\class-wp-hook.php:287
+[25-Jul-2020 15:01:33 UTC] PHP  12. acf_is_local_field_key() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\local-fields.php:529
+[25-Jul-2020 15:01:33 UTC] PHP  13. ACF_Data->is() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\local-fields.php:449
+[25-Jul-2020 15:02:52 UTC] PHP Warning:  Illegal offset type in isset or empty in D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\class-acf-data.php on line 125
+[25-Jul-2020 15:02:52 UTC] PHP Stack trace:
+[25-Jul-2020 15:02:52 UTC] PHP   1. {main}() D:\WordPress\GPB\app\public\index.php:0
+[25-Jul-2020 15:02:52 UTC] PHP   2. require() D:\WordPress\GPB\app\public\index.php:17
+[25-Jul-2020 15:02:52 UTC] PHP   3. require_once() D:\WordPress\GPB\app\public\wp-blog-header.php:19
+[25-Jul-2020 15:02:52 UTC] PHP   4. include() D:\WordPress\GPB\app\public\wp-includes\template-loader.php:106
+[25-Jul-2020 15:02:52 UTC] PHP   5. have_rows() D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php:52
+[25-Jul-2020 15:02:52 UTC] PHP   6. get_field_object() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:497
+[25-Jul-2020 15:02:52 UTC] PHP   7. acf_maybe_get_field() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:121
+[25-Jul-2020 15:02:52 UTC] PHP   8. acf_is_field_key() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\api\api-template.php:171
+[25-Jul-2020 15:02:52 UTC] PHP   9. apply_filters() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-field-functions.php:195
+[25-Jul-2020 15:02:52 UTC] PHP  10. WP_Hook->apply_filters() D:\WordPress\GPB\app\public\wp-includes\plugin.php:206
+[25-Jul-2020 15:02:52 UTC] PHP  11. _acf_apply_is_local_field_key() D:\WordPress\GPB\app\public\wp-includes\class-wp-hook.php:287
+[25-Jul-2020 15:02:52 UTC] PHP  12. acf_is_local_field_key() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\local-fields.php:529
+[25-Jul-2020 15:02:52 UTC] PHP  13. ACF_Data->is() D:\WordPress\GPB\app\public\wp-content\plugins\advanced-custom-fields-pro-master\includes\local-fields.php:449
+[25-Jul-2020 15:55:45 UTC] PHP Parse error:  syntax error, unexpected '$x' (T_VARIABLE), expecting '(' in D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php on line 68
+[25-Jul-2020 15:56:27 UTC] PHP Parse error:  syntax error, unexpected '$x' (T_VARIABLE), expecting '(' in D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php on line 68
+[25-Jul-2020 15:58:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php on line 66
+[25-Jul-2020 15:58:02 UTC] PHP Stack trace:
+[25-Jul-2020 15:58:02 UTC] PHP   1. {main}() D:\WordPress\GPB\app\public\index.php:0
+[25-Jul-2020 15:58:02 UTC] PHP   2. require() D:\WordPress\GPB\app\public\index.php:17
+[25-Jul-2020 15:58:02 UTC] PHP   3. require_once() D:\WordPress\GPB\app\public\wp-blog-header.php:19
+[25-Jul-2020 15:58:02 UTC] PHP   4. include() D:\WordPress\GPB\app\public\wp-includes\template-loader.php:106
+[25-Jul-2020 16:02:04 UTC] PHP Parse error:  syntax error, unexpected ''.svg'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php on line 68
+[25-Jul-2020 16:02:28 UTC] PHP Parse error:  syntax error, unexpected ''.svg'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in D:\WordPress\GPB\app\public\wp-content\themes\green-petal\front-page.php on line 68
