@@ -112,22 +112,90 @@
 <!-- Sorghum Syrup Ends -->
 
 <!-- Nutrional Values -->
-<section class="nutrional-values" data-scroll-section>
-    <img src="<?php echo ASSETS.'/images/tbg1.jpg'; ?>" alt="">
-    <!-- <video style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;z-index:-1" loop src="<?php echo ASSETS.'/images/sorghum-vid.mp4'; ?>" autoplay muted></video> -->
+<section class="nutritional-values" data-scroll-section>
+    <?php 
+        $nutritionalValues = get_field('nutritional_values');
+    ?>
+    <figure data-scroll data-scroll-speed="1">
+        <img src="<?php echo $nutritionalValues['image']['url']; ?>" alt="Nutritional Values Image">
+    </figure>    
     <div class="container">
         <div class="row">
-            <div class="col" data-scroll data-scroll-speed="1">
-                <h2>Nutritional Values</h2>
-                <p>Sorghum Juice has a balanced nutritional profile containing Protein, essential amino acids and minerals. 1Tbsp Sorghum (20g) = 62 Cal + 15g Carbohydrtaes. Sweet sorgum is a source of iron, calcium, and potassium and also has high antioxidant activity when compared to darkest honey.</p>
+            <div class="col">
+                <h2><?php echo $nutritionalValues['title']; ?></h2>                
             </div>
             <div class="col">
-                <ul class="unstyled-list">
-                    <li></li>
+                <?php echo $nutritionalValues['content']; ?>
+                <ul class="unstyled-list row">
+                    <?php
+                        if(have_rows('nutritional_values')):
+                            while(have_rows('nutritional_values')):
+                                the_row();
+                                if(have_rows('nutritional_table')):
+                                    while(have_rows('nutritional_table')):
+                                        the_row();
+                                        echo '<li>
+                                            <span class="title">'.get_sub_field('title').'</span>
+                                            <span>'.get_sub_field('value').'</span>
+                                        </li>';
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                    ?>                    
                 </ul>
             </div>
         </div>
     </div>
 </section>
 <!-- Nutrional Values End -->
+
+<!-- Products Home -->
+<?php
+    $args = array(
+        'post_type' => 'sorghum_products',
+        'posts_per_page' => 3,
+        'meta_key'		=> 'featuerd',
+        'meta_value'	=> true
+    );
+    $products = new WP_Query($args);
+    if($products->found_posts){ ?>
+        <section class="products home-listing" data-scroll-section>
+            <div class="listing-background" data-scroll data-scroll-speed="-2">
+                <?php
+                    $products_options = get_field('products_section');
+                ?>
+                <figure>
+                    <img src="<?php echo $products_options['image']['url']; ?>" alt="Sorghum Products">
+                </figure>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2><?php echo $products_options['title']; ?></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                        $x = 1;
+                        if ( $products->have_posts() ) {                            
+                            while ( $products->have_posts() ) {
+                                echo '<div class="col" data-scroll data-scroll-speed="'.$x.'"><div>';
+                                    $products->the_post();
+                                    $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+                                    echo '<div><img src="'.$url.'" alt=""></div>';
+                                    echo '<h4>' . get_the_title() .'</h4>';
+                                    $features = get_field('meta_featured', get_the_ID());
+                                    var_dump($features);
+                                    echo $features['short_description'];
+                                echo "</div></div>";
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+        </section>
+    <?php }
+?>
+<!-- Products Home End -->
 <?php get_footer(); ?>
